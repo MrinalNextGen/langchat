@@ -1,0 +1,6 @@
+[build]
+  command = "docker build -t fastapi-app ."
+  publish = "."
+
+[deploy]
+  provider = "docker"

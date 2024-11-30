@@ -9,3 +9,4 @@ pydantic
 fastapi
 einops
 sentence-transformers
+nomic
