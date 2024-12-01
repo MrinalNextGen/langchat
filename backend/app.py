@@ -57,7 +57,7 @@ async def chat_endpoint(request: QueryRequest):
     retrieved_docs = search.query_multiple_collections(query, collection_names, limit)
 
     # Step 2: Prepare the context from retrieved documents
-    context = "\n".join([doc['text'] for doc in retrieved_docs])
+    context = "\n".join([doc['text'][:100] for doc in retrieved_docs])
 
     # Step 3: Construct the prompt with context and question
     prompt = (
@@ -78,7 +78,7 @@ async def chat_endpoint(request: QueryRequest):
     sources = [
     {
         "source": doc['source'],
-        "text": doc['text']
+        "text": doc['text'][:100]
     } for doc in retrieved_docs
 ]
 
