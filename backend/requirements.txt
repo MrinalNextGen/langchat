@@ -10,3 +10,4 @@ fastapi
 einops
 sentence-transformers
 nomic
+magnum

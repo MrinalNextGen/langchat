@@ -1,4 +1,4 @@
-# app.py
+#app.py
 import os
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
@@ -76,11 +76,11 @@ async def chat_endpoint(request: QueryRequest):
 
     # Prepare sources
     sources = [
-        {
-            "source": doc['source'],
-            "text": doc['text']
-        } for doc in retrieved_docs
-    ]
+    {
+        "source": doc['source'],
+        "text": doc['text']
+    } for doc in retrieved_docs
+]
 
     # Step 5: Return the answer and sources
     # return AnswerResponse(answer=answer.strip(), sources=sources)
